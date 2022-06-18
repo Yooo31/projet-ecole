@@ -30,7 +30,7 @@
     </div>
     <div class="form-row m-3">
       <div class="form-group col-md-6">
-        <input type="password" class="form-control" id="inputPasswordTravel" placeholder="Mot de passe du voyage" name="passwordTravel">
+        <input type="password" class="form-control" id="inputPasswordTravel" placeholder="Mot de passe du voyage" name="passwordtravel">
       </div>
     </div>
     <h3 class="form-title">Informations sur le voyage</h3>
@@ -44,10 +44,10 @@
     </div>
     <div class="form-row m-3">
       <div class="form-group col-md-6">
-        <input type="date" class="form-control" id="inputStartDate" placeholder="Date de début" name="">
+        <input type="date" class="form-control" id="inputStartDate" placeholder="Date de début" name="datestart">
       </div>
       <div class="form-group col-md-6">
-        <input type="date" class="form-control" id="inputEndDate" placeholder="Date de fin" name="">
+        <input type="date" class="form-control" id="inputEndDate" placeholder="Date de fin" name="dateend">
       </div>
     </div>
     <div class="form-row m-3">
