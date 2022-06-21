@@ -8,16 +8,14 @@
     include_once('include/header.php');
   ?>
 
-  <h1>Ajouter un voyage</h1>
-
   <form action="db_script/insert_user.php" method="post">
-    <h3 class="form-title">Qui proposes le voyage ?</h3>
+    <h3 class="form-title">Créez votre compte</h3>
     <div class="form-row m-3">
       <div class="form-group col-md-6">
-        <input type="text" class="form-control" placeholder="Nom" name="titularlastname">
+        <input type="text" class="form-control" placeholder="Nom" name="lastname">
       </div>
       <div class="form-group col-md-6">
-        <input type="text" class="form-control" placeholder="Prénom" name="titularname">
+        <input type="text" class="form-control" placeholder="Prénom" name="firstname">
       </div>
     </div>
     <div class="form-row m-3">
@@ -36,7 +34,7 @@
         <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" name="password">
       </div>
     </div>
-    <button type="submit" class="btn btn-primary m-3" name="submit">Publier l'annonce</button>
+    <button type="submit" class="btn btn-primary m-3" name="submit">Valider</button>
   </form>
 
 
