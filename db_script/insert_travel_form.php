@@ -4,10 +4,10 @@
   {
     $titularname = $_POST['titularname'];
     $titularlastname = $_POST['titularlastname'];
-    $datestart = $_POST['datestart'];
-    $datestart = preg_replace('#(\d{2})/(\d{2})/(\d{4})\s(.*)#', '$3-$2-$1 $4', $datestart);
-    $dateend = $_POST['dateend'];
-    $dateend = preg_replace('#(\d{2})/(\d{2})/(\d{4})\s(.*)#', '$3-$2-$1 $4', $dateend);
+    $datestartfirst = $_POST['datestart'];
+    $datestart = str_replace('/', '-', $datestartfirst);
+    $dateendfirst = $_POST['dateend'];
+    $dateend = str_replace('/', '-', $dateendfirst);
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $nametravel = $_POST['nametravel'];

@@ -1,5 +1,6 @@
 <?php
     include_once('include/head.php');
+    include_once('db_script/print_one_travel.php');
 ?>
 
 <body>
@@ -8,7 +9,26 @@
     include_once('include/header.php');
   ?>
 
+  <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
+
+    // Convert date to correct format
+
+    $originalDateS = $row['startat'];
+    $startat = date("d-m-Y", strtotime($originalDateS));
+    $originalDateE = $row['endat'];
+    $endat = date("d-m-Y", strtotime($originalDateE));
+
+    // Find the correct number of star
+
+    $star = '';
+
+    for ($i = $row['rate']; $i != 0; $i--) {
+      $star .= '*';
+    }
+  ?>
+
   <h1>Voyage actuel</h1>
+
 
   <div class="container">
     <div class="row justify-content-md-center">
@@ -20,28 +40,30 @@
 
   <div class="container mt-5">
     <div class="row">
-      <h3>Titre Voyage | Note *</h3>
+      <h3><?php echo htmlspecialchars($row['nametravel']); ?> <?php echo htmlspecialchars($star); ?></h3>
     </div>
     <div class="row">
-      <span class="destination">Lieu</span>
+      <span class="destination"><?php echo htmlspecialchars($row['destination']); ?></span>
     </div>
     <div class="row">
-      <p>Description</p>
+      <p><?php echo htmlspecialchars($row['description']); ?></p>
     </div>
   </div>
 
   <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
-        <h3>145 €</h3>
-        <p>Date début / fin</p>
-        <p>Nbr place restante</p>
+        <h3><?php echo htmlspecialchars($row['price']); ?> €</h3>
+        <p>Du <?php echo $startat; ?></p>
+        <p>Au <?php echo $endat; ?></p>
+        <p><?php echo htmlspecialchars($row['numberplace']); ?></p>
         <a class="btn btn-primary" href="#popup-inscrit" role="button">Réserver</a>
       </div>
       <div class="col-md-6">
         <h3>Propriétaire :</h3>
-        <p>Nom Prénom</p>
-        <p>Email +  N°</p>
+        <p><?php echo htmlspecialchars($row['titularname']); ?> <?php echo htmlspecialchars($row['titularlastname']); ?></p>
+        <p><?php echo htmlspecialchars($row['email']); ?></p>
+        <p><?php echo htmlspecialchars($row['phone']); ?></p>
         <a class="btn btn-primary" href="#popup-prive" role="button">Privé</a>
       </div>
     </div>
@@ -99,6 +121,7 @@
 
     </div>
   </div>
+  <?php endwhile; ?>
 
 
   <!-- Importer les iconnes -->
