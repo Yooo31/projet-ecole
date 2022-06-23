@@ -80,13 +80,22 @@
         </div>
       </div>
 
-      <form action="db_script/connect_user.php" method="post">
+      <form action="db_script/insert_reservation.php?id=<?php echo $actual_id_travel;?>" method="post">
         <div class="form-row m-3 justify-content-md-center">
           <div class="form-group col-md-6">
             <input type="text" class="form-control" id="inputUsername" placeholder="Nom d'utilisateur" name="username">
           </div>
           <div class="form-group col-md-6">
             <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" name="password">
+          </div>
+        </div>
+        <div class="form-row m-3 justify-content-md-center">
+          <div class="form-group col-md-6">
+            <input type="number" class="form-control mb-2" id="inputNumberPlace" placeholder="Nombre de place" name="NumberReserved">
+            <span>(Max <?php echo htmlspecialchars($row['numberplace']); ?> personnes)</span>
+          </div>
+          <div class="form-group col-md-6">
+            <h2 class="text-center"><?php echo htmlspecialchars($row['price']); ?> € / personne</h2>
           </div>
         </div>
         <div class="form-row m-1">
@@ -115,7 +124,7 @@
           </div>
         </div>
         <div class="form-row justify-content-md-center">
-          <button type="submit" class="btn btn-primary m-3" name="submit">Réserver !</button>
+          <button type="submit" class="btn btn-primary m-3" name="submit">Accéder !</button>
         </div>
       </form>
 

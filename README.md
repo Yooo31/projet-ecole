@@ -11,4 +11,11 @@ phone INT(10) NOT NULL,
 username VARCHAR(30) NOT NULL,
 password VARCHAR(30) NOT NULL);
 
+CREATE TABLE Reservation (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+UserId INT(6) NOT NULL,
+TravelId INT(6) NOT NULL,
+NumberReserved INT(6) NOT NULL);
+
+
 DELETE FROM /*table*/ WHERE /*id = 1*/
