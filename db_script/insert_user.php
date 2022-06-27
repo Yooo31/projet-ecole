@@ -11,7 +11,8 @@
     $sql = "INSERT INTO UserTable(lastname, firstname, email, phone, username, password)
     VALUES ('$lastname', '$firstname', '$email', '$phone', '$username', '$password')";
     if (mysqli_query($conn, $sql)) {
-      echo "New record has been added successfully !";
+      include_once('../include/head.php');
+      include_once('../include/account_created.php');
     } else {
       echo "Error: " . $sql . ":-" . mysqli_error($conn);
     }

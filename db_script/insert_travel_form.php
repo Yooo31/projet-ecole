@@ -20,7 +20,8 @@
     $sql = "INSERT INTO AllTravel(titularname, titularlastname, email, phone, nametravel, destination, startat, endat, price, rate, numberplace, description, password)
     VALUES ('$titularname', '$titularlastname', '$email', '$phone', '$nametravel', '$destination', '$datestart', '$dateend', '$price', '$rate', '$numberplace', '$description', '$password')";
     if (mysqli_query($conn, $sql)) {
-      echo "New record has been added successfully !";
+      include_once('../include/head.php');
+      include_once('../include/travel_added.php');
     } else {
       echo "Error: " . $sql . ":-" . mysqli_error($conn);
     }

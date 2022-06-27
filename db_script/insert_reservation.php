@@ -1,5 +1,16 @@
 <?php
-  include_once 'connexion_db.php';
+  $servername='localhost';
+  $username='agence';
+  $password='Voyage31.';
+  $dbname = "alltravel";
+
+  // Create connection
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
   if(isset($_POST['submit']))
   {
     // Important Value
@@ -7,12 +18,12 @@
     $NumberReserved = $_POST['NumberReserved'];
     $usernameForm = $_POST['username'];
     $passwordForm = $_POST['password'];
-    // $passwordTable = "SELECT password FROM UserTable WHERE username = $usernameForm;";
-    // $id = "SELECT id FROM UserTable WHERE username = $usernameForm;";
+    // $passwordTable = "SELECT password FROM UserTable WHERE username = a;";
+    // $id = "SELECT id FROM UserTable WHERE username = a;";
     $actual_id_travel = intval($_GET['id']);
 
     // récupérer tous les utilisateurs
-    $formsql = "SELECT * FROM UserTable WHERE username = 'Yoo'";
+    $formsql = "SELECT * FROM UserTable WHERE username = '$usernameForm'";
 
     $resultsql = $conn->query($formsql);
 
@@ -25,18 +36,18 @@
     } else {
       echo "0 results";
     }
-    $conn->close();
 
     if ($passwordTable === $passwordForm) {
-      $sql = "INSERT INTO Reservation(UserId, TravelId, NumberReserved)
-      VALUES ('$id', '$actual_id_travel', '$NumberReserved');";
-      if (mysqli_query($conn, $sql)) {
-        echo "New record has been added successfully !";
+      $requete = "INSERT INTO Reservation(UserId, TravelId, NumberReserved)
+      VALUES ($id, $actual_id_travel, $NumberReserved);";
+      if (mysqli_query($conn, $requete)) {
+        include_once('../include/head.php');
+        include_once('../include/travel_reserved.php');
       } else {
-        echo "Error: " . $sql . ":-" . mysqli_error($conn);
+        echo "Error: " . $requete . " : -" . mysqli_error($conn);
       }
       mysqli_close($conn);
     } else {
-      echo "Error : invalid password" . $passwordTable . $passwordForm;
+      echo "Error : invalid password" . $passwordTable . " -> ". $usernameForm;
     }
   }
