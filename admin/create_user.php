@@ -1,11 +1,11 @@
 <?php
-    include_once('include/head.php');
+    include_once('../include/head.php');
 ?>
 
 <body>
 
   <?php
-    include_once('include/header.php');
+    include_once('../include/header.php');
   ?>
 
   <form action="db_script/insert_user.php" method="post">
