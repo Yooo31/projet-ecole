@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <form action="db_script/connect_admin.php" method="post">
+      <form action="db_script/verification_admin.php?id=<?php echo $actual_id_travel;?>" method="post">
         <div class="form-row mt-3 justify-content-md-center">
           <div class="form-group col-md-6">
             <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" name="password">
