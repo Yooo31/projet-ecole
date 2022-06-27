@@ -27,9 +27,6 @@
     }
   ?>
 
-  <h1>Voyage actuel</h1>
-
-
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="bg-img">

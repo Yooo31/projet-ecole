@@ -20,6 +20,50 @@
   /* background: var(--clr); */
 }
 
+/* NavBar */
+
+.navbar {
+  height: 7%;
+}
+
+.logo {
+  width: 80%;
+  height: auto;
+}
+
+.left {
+  position: absolute;
+  top: 6;
+  left: 20;
+  width: 5%;
+}
+
+.center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 14;
+}
+
+.right {
+  position: absolute;
+  right: 20;
+  top: 0;
+}
+
+.right a {
+  font-weight: 300px;
+  margin-top: 20%;
+}
+
+.right a ion-icon{
+  font-size: 30px;
+}
+
 .bg-accueil {
   width: 100%;
   height: 45%;
