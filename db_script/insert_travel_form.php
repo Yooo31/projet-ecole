@@ -17,8 +17,11 @@
     $numberplace = $_POST['numberplace'];
     $description = $_POST['description'];
     $password = $_POST['passwordtravel'];
+
     $sql = "INSERT INTO AllTravel(titularname, titularlastname, email, phone, nametravel, destination, startat, endat, price, rate, numberplace, description, password)
     VALUES ('$titularname', '$titularlastname', '$email', '$phone', '$nametravel', '$destination', '$datestart', '$dateend', '$price', '$rate', '$numberplace', '$description', '$password')";
+
+
     if (mysqli_query($conn, $sql)) {
       include_once('../include/head.php');
       include_once('../include/travel_added.php');

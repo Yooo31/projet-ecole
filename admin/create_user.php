@@ -8,7 +8,7 @@
     include_once('../include/header.php');
   ?>
 
-  <form action="db_script/insert_user.php" method="post">
+  <form action="../db_script/insert_user.php" method="post">
     <h3 class="form-title">Créez votre compte</h3>
     <div class="form-row m-3">
       <div class="form-group col-md-6">

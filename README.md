@@ -17,7 +17,8 @@ CREATE TABLE AllTravel (
   price INT(10)  NOT NULL,
   rate INT(10)  NOT NULL,
   numberplace int(50)  NOT NULL,
-  description text  NOT NULL);
+  description text  NOT NULL
+  image longblob NOT NULL);
 
 CREATE TABLE UserTable (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,

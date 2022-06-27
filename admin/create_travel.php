@@ -9,7 +9,7 @@
   ?>
 
   <div class="big-container">
-    <form action="db_script/insert_travel_form.php" method="post">
+    <form action="../db_script/insert_travel_form.php" method="post">
       <h3 class="form-title">Qui proposes le voyage ?</h3>
       <div class="form-row m-3">
         <div class="form-group col-md-6">
@@ -62,10 +62,11 @@
           <input type="number" class="form-control" id="inputNumberPlace" placeholder="Nombre de place" name="numberplace">
         </div>
         <div class="form-group col-md-6">
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" id="customFile" name="">
-            <label class="custom-file-label" for="customFile">Importer des fichiers</label>
+        <div class="file-field">
+          <div class="btn btn-sm">
+            <input type="file" name="image">
           </div>
+        </div>
         </div>
       </div>
       <div class="form-group m-3">

@@ -15,9 +15,11 @@
   <div class="big-container">
     <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
       $actual_id = $row['id'];
+      $place = $row['numberplace'];
+      if ($place != 0) :
     ?>
       <div class="card m-3 card-size">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="../content/logo.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title"><?php echo htmlspecialchars($row['nametravel']); ?></h5>
           <p class="card-text"><?php echo htmlspecialchars($row['description']); ?></p>
@@ -28,7 +30,8 @@
         </ul>
         <a class="btn btn-primary" href="/show_actual_travel.php?id=<?php echo $actual_id;?>" role="button">Voir</a>
       </div>
-    <?php endwhile; ?>
+    <?php endif;
+  endwhile; ?>
   </div>
 
 
