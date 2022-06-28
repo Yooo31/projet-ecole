@@ -1,12 +1,12 @@
 <?php
-    include_once('include/head.php');
-    include_once('db_script/print_one_travel.php');
+    include_once('../include/head.php');
+    include_once('../db_script/print_one_travel.php');
 ?>
 
 <body>
 
   <?php
-    include_once('include/header.php');
+    include_once('../include/header.php');
   ?>
 
   <?php while($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
@@ -77,7 +77,7 @@
         </div>
       </div>
 
-      <form action="db_script/insert_reservation.php?id=<?php echo $actual_id_travel;?>" method="post">
+      <form action="../db_script/insert_reservation.php?id=<?php echo $actual_id_travel;?>" method="post">
         <div class="form-row m-3 justify-content-md-center">
           <div class="form-group col-md-6">
             <input type="text" class="form-control" id="inputUsername" placeholder="Nom d'utilisateur" name="username">
@@ -114,7 +114,7 @@
         </div>
       </div>
 
-      <form action="db_script/verification_admin.php?id=<?php echo $actual_id_travel;?>" method="post">
+      <form action="../db_script/verification_admin.php?id=<?php echo $actual_id_travel;?>" method="post">
         <div class="form-row mt-3 justify-content-md-center">
           <div class="form-group col-md-6">
             <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" name="password">

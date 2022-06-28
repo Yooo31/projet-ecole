@@ -1,11 +1,11 @@
 <?php
-    include_once('include/head.php');
-    include_once('db_script/print_all_travel.php');
+    include_once('../include/head.php');
+    include_once('../db_script/print_all_travel.php');
 ?>
 
 <body>
   <?php
-    include_once('include/header.php');
+    include_once('../include/header.php');
   ?>
 
   <div class="title-container mb-5 mt-5">
@@ -30,7 +30,7 @@
           <li class="list-group-item"><?php echo htmlspecialchars($row['titularname']); ?> <br /> <?php echo htmlspecialchars($row['titularlastname']); ?></li>
           <li class="list-group-item"><?php echo htmlspecialchars($row['email']); ?> <br /> <?php echo htmlspecialchars($row['phone']); ?></li>
         </ul>
-        <a class="btn btn-primary" href="/show_actual_travel.php?id=<?php echo $actual_id;?>" role="button">Voir</a>
+        <a class="btn btn-primary" href="../voyage/show_actual_travel.php?id=<?php echo $actual_id;?>" role="button">Voir</a>
       </div>
     <?php endif;
   endwhile; ?>

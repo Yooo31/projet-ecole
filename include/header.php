@@ -8,7 +8,7 @@
           <div class="center">
             <a class="nav-item nav-link" href="/">Accueil</a>
             <a class="nav-item nav-link" href="/admin/create_travel.php">Ajouter</a>
-            <a class="nav-item nav-link" href="/indisponible.php">Indisponible</a>
+            <a class="nav-item nav-link" href="/voyage/indisponible.php">Indisponible</a>
           </div>
           <div class="right">
             <a class="nav-item nav-link" href="/admin/create_user.php"><ion-icon name="person-add-outline"></ion-icon></a>
