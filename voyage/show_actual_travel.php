@@ -54,13 +54,15 @@
         <p>Du <?php echo $startat; ?></p>
         <p>Au <?php echo $endat; ?></p>
         <p><?php echo htmlspecialchars($row['numberplace']); ?></p>
-        <a class="btn btn-primary" href="#popup-inscrit" role="button">Réserver</a>
+        <?php if ($row['numberplace'] > 0) : ?>
+          <a class="btn btn-primary" href="#popup-inscrit" role="button">Réserver</a>
+        <?php endif ?>
       </div>
       <div class="col-md-6">
         <h3>Propriétaire :</h3>
         <p><?php echo htmlspecialchars($row['titularname']); ?> <?php echo htmlspecialchars($row['titularlastname']); ?></p>
         <p><?php echo htmlspecialchars($row['email']); ?></p>
-        <p><?php echo htmlspecialchars($row['phone']); ?></p>
+        <p>0<?php echo htmlspecialchars($row['phone']); ?></p>
         <a class="btn btn-primary" href="#popup-prive" role="button">Privé</a>
       </div>
     </div>

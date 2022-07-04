@@ -26,7 +26,7 @@
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item"><?php echo htmlspecialchars($row['titularname']); ?> <br /> <?php echo htmlspecialchars($row['titularlastname']); ?></li>
-          <li class="list-group-item"><?php echo htmlspecialchars($row['email']); ?> <br /> <?php echo htmlspecialchars($row['phone']); ?></li>
+          <li class="list-group-item"><?php echo htmlspecialchars($row['email']); ?> <br /> 0<?php echo htmlspecialchars($row['phone']); ?></li>
         </ul>
         <a class="btn btn-primary" href="/voyage/show_actual_travel.php?id=<?php echo $actual_id;?>" role="button">Voir</a>
       </div>

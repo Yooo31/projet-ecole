@@ -44,10 +44,12 @@
         include_once('../include/head.php');
         include_once('../include/travel_reserved.php');
       } else {
-        echo "Error: " . $requete . " : -" . mysqli_error($conn);
+        include_once('../include/head.php');
+        include_once('../include/erreur.php');
       }
       mysqli_close($conn);
     } else {
-      echo "Error : invalid password" . $passwordTable . " -> ". $usernameForm;
+      include_once('../include/head.php');
+      include_once('../include/erreur.php');
     }
   }

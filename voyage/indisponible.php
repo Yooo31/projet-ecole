@@ -21,7 +21,7 @@
       if ($place == 0) :
     ?>
       <div class="card m-3 card-size">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="../content/complet.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title"><?php echo htmlspecialchars($row['nametravel']); ?></h5>
           <p class="card-text"><?php echo htmlspecialchars($row['description']); ?></p>

@@ -14,7 +14,8 @@
       include_once('../include/head.php');
       include_once('../include/account_created.php');
     } else {
-      echo "Error: " . $sql . ":-" . mysqli_error($conn);
+      include_once('../include/head.php');
+      include_once('../include/erreur.php');
     }
     mysqli_close($conn);
   }
