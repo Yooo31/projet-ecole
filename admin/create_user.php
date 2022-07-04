@@ -12,26 +12,26 @@
     <h3 class="form-title">Créez votre compte</h3>
     <div class="form-row m-3">
       <div class="form-group col-md-6">
-        <input type="text" class="form-control" placeholder="Nom" name="lastname">
+        <input type="text" class="form-control" placeholder="Nom" name="lastname" required>
       </div>
       <div class="form-group col-md-6">
-        <input type="text" class="form-control" placeholder="Prénom" name="firstname">
-      </div>
-    </div>
-    <div class="form-row m-3">
-      <div class="form-group col-md-6">
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email">
-      </div>
-      <div class="form-group col-md-6">
-        <input type="tel" class="form-control" id="inputPhone" placeholder="N° Tel" maxlength="10" name="phone">
+        <input type="text" class="form-control" placeholder="Prénom" name="firstname" required>
       </div>
     </div>
     <div class="form-row m-3">
       <div class="form-group col-md-6">
-        <input type="text" class="form-control" id="inputUsername" placeholder="Nom d'utilisateur" name="username">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" required>
       </div>
       <div class="form-group col-md-6">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" name="password">
+        <input type="tel" class="form-control" id="inputPhone" placeholder="N° Tel" maxlength="10" name="phone" required>
+      </div>
+    </div>
+    <div class="form-row m-3">
+      <div class="form-group col-md-6">
+        <input type="text" class="form-control" id="inputUsername" placeholder="Nom d'utilisateur" name="username" required>
+      </div>
+      <div class="form-group col-md-6">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe" name="password" required>
       </div>
     </div>
     <button type="submit" class="btn btn-primary m-3" name="submit">Valider</button>

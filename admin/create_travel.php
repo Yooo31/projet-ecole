@@ -13,53 +13,53 @@
       <h3 class="form-title">Qui proposes le voyage ?</h3>
       <div class="form-row m-3">
         <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Nom" name="titularlastname">
+          <input type="text" class="form-control" placeholder="Nom" name="titularlastname" required>
         </div>
         <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Prénom" name="titularname">
-        </div>
-      </div>
-      <div class="form-row m-3">
-        <div class="form-group col-md-6">
-          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email">
-        </div>
-        <div class="form-group col-md-6">
-          <input type="tel" class="form-control" id="inputPhone" placeholder="N° Tel" maxlength="10" name="phone">
+          <input type="text" class="form-control" placeholder="Prénom" name="titularname" required>
         </div>
       </div>
       <div class="form-row m-3">
         <div class="form-group col-md-6">
-          <input type="password" class="form-control" id="inputPasswordTravel" placeholder="Mot de passe du voyage" name="passwordtravel">
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" required>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="tel" class="form-control" id="inputPhone" placeholder="N° Tel" maxlength="10" name="phone" required>
+        </div>
+      </div>
+      <div class="form-row m-3">
+        <div class="form-group col-md-6">
+          <input type="password" class="form-control" id="inputPasswordTravel" placeholder="Mot de passe du voyage" name="passwordtravel" required>
         </div>
       </div>
       <h3 class="form-title">Informations sur le voyage</h3>
       <div class="form-row m-3">
         <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Nom du voyage" name="nametravel">
+          <input type="text" class="form-control" placeholder="Nom du voyage" name="nametravel" required>
         </div>
         <div class="form-group col-md-6">
-          <input type="text" class="form-control" placeholder="Destination" name="destination">
-        </div>
-      </div>
-      <div class="form-row m-3">
-        <div class="form-group col-md-6">
-          <input type="date" class="form-control" id="inputStartDate" placeholder="Date de début" name="datestart">
-        </div>
-        <div class="form-group col-md-6">
-          <input type="date" class="form-control" id="inputEndDate" placeholder="Date de fin" name="dateend">
+          <input type="text" class="form-control" placeholder="Destination" name="destination" required>
         </div>
       </div>
       <div class="form-row m-3">
         <div class="form-group col-md-6">
-          <input type="number" class="form-control" id="inputPrice" placeholder="Prix" name="price">
+          <input type="date" class="form-control" id="inputStartDate" placeholder="Date de début" name="datestart" required>
         </div>
         <div class="form-group col-md-6">
-          <input type="number" class="form-control" id="inputRate" placeholder="Note /5" maxlength="1" min="0" max="5" name="rate">
+          <input type="date" class="form-control" id="inputEndDate" placeholder="Date de fin" name="dateend" required>
         </div>
       </div>
       <div class="form-row m-3">
         <div class="form-group col-md-6">
-          <input type="number" class="form-control" id="inputNumberPlace" placeholder="Nombre de place" name="numberplace">
+          <input type="number" class="form-control" id="inputPrice" placeholder="Prix" name="price" required>
+        </div>
+        <div class="form-group col-md-6">
+          <input type="number" class="form-control" id="inputRate" placeholder="Note /5" maxlength="1" min="0" max="5" name="rate" required>
+        </div>
+      </div>
+      <div class="form-row m-3">
+        <div class="form-group col-md-6">
+          <input type="number" class="form-control" id="inputNumberPlace" placeholder="Nombre de place" name="numberplace" required>
         </div>
         <div class="form-group col-md-6">
         <div class="file-field">
@@ -71,7 +71,7 @@
       </div>
       <div class="form-group m-3">
         <label for="bio">Description du voyage</label>
-        <textarea class="form-control" id="bio" rows="3" name="description"></textarea>
+        <textarea class="form-control" id="bio" rows="3" name="description" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary m-3" name="submit">Publier l'annonce</button>
     </form>
