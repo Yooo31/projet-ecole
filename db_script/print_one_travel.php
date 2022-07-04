@@ -1,6 +1,6 @@
 <?php
   $host = 'localhost';
-  $dbname = 'alltravel';
+  $dbname = 'travite';
   $username = 'agence';
   $password = 'Voyage31.';
   $actual_id_travel = intval($_GET['id']);

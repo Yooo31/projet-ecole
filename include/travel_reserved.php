@@ -10,7 +10,7 @@
   $servername='localhost';
   $username='agence';
   $password='Voyage31.';
-  $dbname = "alltravel";
+  $dbname = "travite";
 
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);

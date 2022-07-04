@@ -1,6 +1,6 @@
 <?php
   $host = 'localhost';
-  $dbname = 'alltravel';
+  $dbname = 'travite';
   $username = 'agence';
   $password = 'Voyage31.';
 
